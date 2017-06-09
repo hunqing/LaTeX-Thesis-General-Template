@@ -1,0 +1,22 @@
+%%==============================%%
+%%=======填写英文摘要===========%%
+%%==============================%%
+\ENabstract{%
+
+Wilderness search and rescue (WiSAR) is very necessary and difficult for our country for its vast territory, frequent field disasters. In general, WiSAR is the race with time, every second counts. Search and rescue operations often need a lot of manpower and resources. The traditional rescue method is inefficient and can easily miss the gold search and rescue time. In recent years, the rapid development of Unmanned Ariel Vehicles (UAV) has made it possible for rapid search and rescue. UAV equipped with image acquisition equipment and a variety of sensors, transport the obtained video to the ground station. In addition, the UAV is agile, flexible, and can perform actions that are difficult to perform by humans. These features make UAV more suitable for WiSAR. However, currently UAV in WiSAR mainly uses the image acquisition module, cares little about the automation, the application scenarios are relatively limited. Therefore, the key technologies in the design of UAVs for WiSAR are studied, i.e., the autonomous obstacle avoidance, path planning and automatic mobile landing. Meanwhile, we utilize the target detection and recognition technology in computer vision to detect and locate survivors.
+
+For target detection, we use the infrared images for assistance. Morphological image processing methods are used to obtain the salient region. The salient region is then converted into the target candidate region in the optical image by infrared and optical image registration. Based on the candidate region, the improved deep convolution neural network model SSD is used for real-time detection of target. And the model is trained with the built data set.
+ With regard to autonomous obstacle avoidance, we adopt the obstacle avoidance scheme based on binocular vision. Mainly use the parallax principle to carry out motion estimation, so as to obtain the depth information of the obstacle in front of the UAV. And then update the cost map based on the obstacle cloud, and further update the obstacle avoidance route according to the cost map, so as to achieve the purpose of avoiding obstacles. The results of the obstacle avoidance experiments for static obstacle (wall, tree, etc.) and moving obstacle (pedestrian) show that the vision avoidance scheme based on binocular vision is more suitable for the realization of low cost UAV SAR system than LIDAR.
+
+With regard to the autonomous mobile landing, we introduce the visual fiducial system AprilTag from the Augmentation Reality filed. By encoding an AprilTag, the detection algorithm can greatly reduce the false alarm, and because of the introduction of fault tolerance mechanism, the miss rate is also maintained at a very low level. After detecting the mark, by solving the PnP problem, the UAV can dynamically adjust its pose in order to achieve accurate mobile landing. Experimental results show that the position deviation of landing is not more than 10 cm, which hopefully meets the requirement of real landing scenario where a UAV is likely to need to land on a platform with limited area, such as roof and truck rear.
+
+Based on the above, we design the prototype construction and a supplementary demonstration system of WiSAR. The system adopts modular development strategy, leading to low coupling degree and high portability. The accompanying software applications includes an Android mobile application and a multi-threaded graphical interface program based on Qt5. Both applications respond quickly and interactively. The experimental results on the complete system of hardware and software show that the prototype of the WiSAR system functions well and the simulation search and rescue task can be successfully accomplished, which provides a good foundation for creating a WiSAR system with higher integration and higher efficiency.
+
+\thispagestyle{empty}
+}
+
+%%==============================%%
+%%=======填写英文关键词=========%%
+%%==============================%%
+%%注意: 每个关键词之间用“；”分开，最后一个关键词不打标点符号
+\ENkeywords{Wilderness Search and Rescue; Unmanned Aircraft Vehicle; Object Detection; Autonomous Obstacle Avoidance; Mobile Landing}

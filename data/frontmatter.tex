@@ -1,0 +1,143 @@
+% !Mode:: "TeX:UTF-8"
+%%% 本文件请勿改动！
+
+%%=================================================%%
+%%===================论文封面页====================%%
+%%=================================================%%
+\setcounter{page}{1}
+\begin{titlepage}
+  \begin{center}
+    \par
+    \vspace*{15mm} %插入空白
+
+    \begin{center}
+      \heiti \zihao{1} 第十二届中国研究生电子设计竞赛
+    \end{center}
+
+    \vspace{2mm}
+
+    \begin{center}
+      \heiti \zihao{1} 技术论文
+    \end{center}
+      
+    \vspace{1cm}
+
+    \begin{flushleft}
+      \heiti \zihao{-2} 论文题目：
+    \end{flushleft}
+
+    \begin{center}
+     \heiti \zihao{-2} \the\Ctitle
+    \end{center}
+
+    \vspace{1mm}
+    \begin{center}
+     \heiti \zihao{-2} \the\Etitle
+    \end{center}
+
+    \par
+    \vspace{35mm}
+    {
+    \heiti\zihao{-3}
+    \newcommand\maketabox[1]{\makebox[2.5cm][s]{#1}}
+    \begin{tabular}{cp{8cm}}
+      \maketabox{参赛单位：}&\the\Cschoolname\\[1ex]
+      \maketabox{队伍名称：}&\the\Cmajor\\[1ex]
+      \maketabox{指导老师：}&\the\Cauthor\\[1ex]
+      \maketabox{参赛队员：}&\the\Csupervisor\\[1ex]
+      \maketabox{完成时间：}&\the\Cdate\\[1ex]
+     \end{tabular}
+    }
+    % \par
+
+    % \vspace{30mm}
+    % {
+    % {\songti \zihao{3} \the\Cdate}%\par
+    % }
+    %\vspace*{-0.7cm}
+  \end{center}%
+  \clearpage
+\end{titlepage}
+
+
+% %%=================================================%%
+% %%====================郑重声明=====================%%
+% %%=================================================%%
+% \newpage
+% \thispagestyle{empty}
+% \renewcommand{\baselinestretch}{1.5}  %下文的行距
+
+% \vspace*{28mm}
+% \begin{center}{\ziju{1}\songti \zihao{2} \textbf{郑重声明}}\end{center}
+% \par\vspace*{20pt}
+% \renewcommand{\baselinestretch}{2}
+% {\zihao{4}%
+
+% 本人呈交的学位论文，是在导师的指导下，独立进行研究工作所取得的成果，所有数据、图片资料真实可靠。尽我所知，除文中已经注明引用的内容外，本学位论文的研究成果不包含他人享有著作权的内容。对本论文所涉及的研究工作做出贡献的其他个人和集体，均已在文中以明确的方式标明。本学位论文的知识产权归属于培养单位。
+% \par
+% \vspace{3.5cm}
+% \hspace*{0.5cm}本人签名: \underline{\hspace{3.5cm}}
+% \hspace{2cm}日期: \underline{\hspace{3.5cm}}\hfill\par}
+% \baselineskip=23pt
+
+
+%%=================================================%%
+%%==============Abstract & Keywords================%%
+%%=================================================%%
+\newcommand\cnkeywords[1]{ {\noindent\heiti\zihao{-4} 关键词: }\zihao{-4}#1}
+\newcommand\enkeywords[1]{ {\noindent\bfseries\zihao{-4} Key words: }\zihao{-4}#1}
+
+%%=======中文摘要===========%%
+\newpage
+\thispagestyle{empty}
+\vspace{10pt}
+\begin{center}{\ziju{1}\heiti \zihao{-2} 摘要}\end{center}
+\renewcommand{\baselinestretch}{1.5}
+\baselineskip=20pt% 正文行距为 23 磅
+
+{\songti \zihao{-4}%
+
+\the\CNabstract
+}
+\par
+\vspace*{2em}
+%%=======中文关键词===========%%
+\cnkeywords{\the\CNkeywords}
+
+
+%%=======英文摘要===========%%
+\newpage
+\thispagestyle{empty}
+\vspace{10pt}
+\begin{center}{\zihao{-2} \textbf{ABSTRACT}}\end{center}
+\renewcommand{\baselinestretch}{1.5}
+\baselineskip=20pt% 正文行距为 23 磅
+{\zihao{-4}%
+
+\the\ENabstract
+}
+\par
+\vspace*{2em}
+%%=======英文关键词===========%%
+\enkeywords{\the\ENkeywords}
+
+\renewcommand{\baselinestretch}{1}\normalsize
+\baselineskip=20pt% 正文行距为 23 磅
+\fancyfoot[C]{\zihao{5}\thepage}
+
+\cleardoublepage
+\thispagestyle{empty}
+\pagenumbering{gobble}  %去掉目录页码
+
+\tableofcontents   %生成目录
+\thispagestyle{empty}
+
+\cleardoublepage
+% \thispagestyle{fancy}
+\pagenumbering{arabic}  %重新计数页码
+\setcounter{page}{1}
+
+\fancyhf{}  %清除以前对页眉页脚的设置
+\rfoot{\thepage}
+\chead{\songti \zihao{5} 第十二届中国研究生电子设计竞赛 \\ 面向野外搜救的智能无人机系统}
+\renewcommand{\headrulewidth}{1pt}
